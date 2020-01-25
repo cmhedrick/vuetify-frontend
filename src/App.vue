@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <v-navigation-drawer app></v-navigation-drawer>
     <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
@@ -34,20 +35,19 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld />
+      <v-container fluid>
+        <router-view></router-view>
+      </v-container>
     </v-content>
+    <v-footer app></v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
 export default {
   name: "App",
 
-  components: {
-    HelloWorld
-  },
+  components: {},
 
   data: () => ({
     //
